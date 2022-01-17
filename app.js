@@ -9,6 +9,9 @@ app.use(express.json({ extended: true, limit: '50mb' }))
 app.use(express.static('public'))
 // app.use(express.static('build'))
 
+var util= require('util')
+var encoder = new util.TextEncoder('utf-8')
+
 
 app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
 // app.use('/', express.static(path.join(__dirname, 'admin', 'build')))
