@@ -1,0 +1,228 @@
+//main: style.less
+
+header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  background: @white;
+  color: @white;
+  box-shadow: 0 0 10px 3px @main;
+  z-index: 1000;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo_container {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  background: @white;
+  border-radius: 50%;
+}
+
+.menu_desctop {
+  @media (max-width: 950px) {
+    display: none;
+  }
+}
+
+.menu_header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.menu_item {
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: @bold;
+  color: rgba(@text, .8);
+  transition: color .5s;
+
+  &:hover {
+    color: @text;
+  }
+}
+
+.menu_item_i {
+  position: relative;
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: @bold;
+  color: rgba(@text, .8);
+  transition: color .5s;
+}
+
+.basket_span {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 1px @main;
+  background: @white;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.menu_item_img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu_item::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  display: block;
+  margin: 1px 0 20px;
+  transition: all .3s ease-out;
+  background: @text;
+}
+
+.menu_item:hover::after {
+  width: 100%
+}
+
+.profile-href {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.basket-href {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.basket-nav {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 40px;
+}
+
+.basket-nav span {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: @white;
+  border: 1px solid @white;
+  text-align: center;
+  box-shadow: 0 0 5px 1px @main;
+  color: @text;
+}
+
+.burder_menu {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  min-width: 0;
+  min-height: 0;
+  background: none;
+  padding: 0;
+  color: @text;
+  border: 0;
+  box-shadow: none;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
+    background: @main;
+    margin: 18px 0;
+    transition: all .2s;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 8px;
+      background: @main;
+      transition: all .3s;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 8px;
+      background: @main;
+      transition: all .3s;
+    }
+  }
+
+  @media (max-width: 950px) {
+    display: block;
+  }
+}
+
+.burgerActive {
+  span {
+    background: none;
+
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 25px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      top: 12px;
+    }
+
+  }
+}
+
+.burger_list {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 80px;
+  z-index: 100;
+  background: @white;
+  transition: all .3s;
+
+  transform: translateX(100%);
+}
+
+.menu_burger_item {
+  margin: 50px 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.burgerListActive {
+  transform: translateX(0);
+}

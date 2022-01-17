@@ -1,0 +1,7 @@
+{
+  "PORT": "80",
+  "mongoUri": "mongodb+srv://Morjick:1234zxcv@neirodialog.rjoq5.mongodb.net/neirodialog?retryWrites=true&w=majority",
+  "SECRET_KEY": "very secret key",
+  "PUBLIC_KEY": "eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6IjI0ZWUxdS0wMCIsInVzZXJfaWQiOiI3OTUxNzEwNTAxMSIsInNlY3JldCI6IjUyZWQzNDY1ZWIzMGI1ZTQxMGQzZDRjODA4ZjU0YzQ5ZTlmYjA0ZjQ3M2FhNjc2YzU5ZjVjY2U2NGI1ZGM1YmEifX0=",
+  "SERVER_URL": "http://neirodialog.ru"
+}

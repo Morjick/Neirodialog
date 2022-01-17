@@ -1,0 +1,142 @@
+//main: style.less
+
+.gallery-inner {
+  display: flex;
+  position: relative;
+}
+
+.gallery-sidebar {
+  position: fixed;
+  width: 300px;
+  height: 600px;
+  border: 1px solid @main;
+  border-radius: 8px;
+  padding: 15px;
+
+  @media(max-width: 800px) {
+    display: none;
+  }
+}
+
+.galley-search-title {
+  font-weight: @bold;
+  margin: 15px 0;
+}
+
+.galley-search {
+  width: 260px;
+  height: 25px;
+  background: @helpColor;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+
+  &::placeholder {
+    color: @text;
+  }
+}
+
+.filter-sidebar {
+  margin: 40px 0;
+}
+
+.filter-sidebar-flexer {
+  display: flex;
+  margin: 15px 0;
+
+  input {
+    opacity: 0;
+  }
+}
+
+.filter-sidebar-flexer input:checked ~ div.input {
+  background: @main;
+}
+
+.input {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid @main;
+  background: @white;
+  margin-right: 15px;
+}
+
+.gallery-container {
+  display: block;
+  width: 100%;
+}
+
+.gallery-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery_item {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: all .2s;
+    left: 0;
+  }
+
+  &:hover::after {
+    background: rgba(@text, .3);
+  }
+
+  img {
+    width: 100%;
+    transform: scale(2);
+  }
+
+  @media(max-width: 800px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.gallery-active {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(@text, .6);
+}
+
+.active-img-container {
+  position: absolute;
+  // width: 600px;
+  // height: 401px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid @main;
+  background: @white;
+  margin-top: 90px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.galley-title {
+  font-weight: @bold;
+  font-size: 20px;
+  text-align: center;
+  // margin-left: 500px;
+}

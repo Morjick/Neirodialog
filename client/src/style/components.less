@@ -1,0 +1,108 @@
+//main: style.less
+
+button {
+  min-width: 125px;
+  min-height: 40px;
+  background: @main;
+  padding: 5px 10px;
+  color: @white;
+  font-size: 18px;
+  font-weight: @bold;
+  border-radius: 12px;
+  border: 1px solid @main;
+  box-shadow: @darkShadow;
+}
+
+.primery-btn {
+  min-height: 40px;
+  background: @white;
+  color: @main;
+  font-size: 18px;
+  font-weight: @bold;
+  border-radius: 12px;
+  border: 1px solid @main;
+  box-shadow: @darkShadow;
+  cursor: pointer;
+}
+
+.none-btn {
+  position: relative;
+  border: none;
+  background: none;
+  color: @text;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  text-align: left;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 30%;
+    background-image: url(../assets/sprytes/arrow-right.png);
+    width: 40px;
+    height: 34px;
+    background-size: 40px 34px;
+    background-repeat: no-repeat;
+  }
+}
+
+.delete-btn {
+  border: none;
+  box-shadow: none;
+  color: @text;
+  text-decoration: underline;
+  background: none;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: @bold;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: @bold;
+}
+
+.minititle {
+  font-weight: @bold;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.flexer-beetween {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.button-right {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.mt-90 {
+  margin-top: 90%;
+}
+
+.flexer {
+  display: flex;
+}
+
+.hr {
+  width: 90%;
+  margin: 20px auto 10px;
+  height: 3px;
+  background: @white;
+}
+
+.danger {
+  color: #EA2929;
+  font-weight: bold;
+}

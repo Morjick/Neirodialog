@@ -1,0 +1,181 @@
+//main: style.less
+
+.shop_container_inner {
+  display: flex;
+  position: relative;
+}
+
+.shop-sidebar {
+  min-width: 300px;
+  max-width: 310px;
+  height: 600px;
+  border: 1px solid @main;
+  border-radius: 8px;
+  padding: 15px;
+
+  @media(max-width: 800px) {
+    display: none;
+  }
+}
+
+.shop-wrapper {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+
+  @media(max-width: 800px) {
+    margin-left: 0;
+  }
+}
+
+.shop-filter-select {
+  background: @main;
+  padding: 10px;
+  border-radius: 8px;
+  color: @white;
+  margin: 0 15px;
+}
+
+.shop-content-inner {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.shop_item {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border: 1px solid @main;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.shop_item_inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    transform: scale(1.8);
+    border-radius: 8px;
+  }
+}
+
+.shop_item_name {
+  font-weight: @bold;
+  font-size: 18px;
+  z-index: 2;
+  background: @white;
+}
+
+.add_to_basket {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding:  0 15px;
+  text-align: right;
+  background: @white;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+
+  span {
+    margin: 15px 0;
+    font-weight: @bold;
+  }
+}
+
+.count_product {
+  display: flex;
+  box-shadow: 0 0 5px 1px @main;
+  border-radius: 20px;
+  padding: 0 5px;
+
+  input {
+    width: 50px;
+    text-align: center;
+  }
+
+  button {
+    min-width: 0;
+    min-height: 0;
+    background: none;
+    padding: 0 15px;
+    color: @text; 
+    border: 0;
+    box-shadow: none;
+    background: @main;
+  }
+}
+
+.add_to_basket {
+  img {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+.product_check {
+  width: 20px;
+  height: 20px;
+}
+
+.checked {
+  justify-content: end;
+  min-height: 50px;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.toast_shop {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  z-index: 50;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: @white;
+  box-shadow: 0 0 10px 2px @main;
+}
+
+.toast_shop_inner {
+  border-radius: 50%;
+  position: relative;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: -20px;
+    right: -15px;
+    padding: 3px;
+    background: @white;
+    box-shadow: 0 0 5px 2px @main;
+    border-radius: 50%;
+  }
+}

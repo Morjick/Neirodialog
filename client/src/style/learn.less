@@ -1,0 +1,43 @@
+//main: style.less
+
+.learn_container_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.learn_item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 350px;
+  border: 1px solid @lightGray;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 1px 1px 5px 0 @lightGray;
+  padding: 40px;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    border: 1px solid @main;
+    box-shadow: 1px 1px 5px 0 @main;
+  }
+}
+
+.learn-title {
+  font-weight: @medium;
+  font-size: 25px;
+  transition: all .3s;
+}
+
+.learn-sale {
+  border: 1px solid #FF5C66;
+
+  &:hover {
+    box-shadow: 0 0 5px 2px #FF5C66;
+    border: 1px solid #FF5C66;
+  }
+}
