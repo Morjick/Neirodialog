@@ -74,7 +74,7 @@ export default {
     },
     async getShop() {
       console.log('меня попросили достать продукты')
-      const responce = await fetch('/api/find/products', {
+      const responce = await fetch('http://77.223.97.78/api/find/products', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
