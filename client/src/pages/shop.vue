@@ -73,6 +73,7 @@ export default {
       document.title = 'Neirodialog Магазин'
     },
     async getShop() {
+      console.log('меня попросили достать продукты')
       const responce = await fetch('/api/find/products', {
         method: 'GET'
       })
