@@ -63,7 +63,6 @@ export default {
         activeImgContainer.style.width = '100vw'
       }
       
-      // activeImgContainer.style.height = '100vh'
       activeImgContainer.appendChild(Image)
 
       galleryActive.onclick = (e) => {
@@ -76,17 +75,11 @@ export default {
         }
       }
     },
-    // getGalleryImages() {
-    //   let timesGallery
-    //   timesGallery = gallery
-
-    //   this.images = timesGallery
-    // },
     title() {
       document.title = 'Neirodialog Галлерея'
     },
     async getGallry() {
-      const responce = await fetch('http://localhost:80/api/find/gallery', {
+      const responce = await fetch('/api/find/gallery', {
         method: 'GET'
       })
       
