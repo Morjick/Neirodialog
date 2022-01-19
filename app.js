@@ -12,6 +12,12 @@ app.use(express.static('public'))
 var util= require('util')
 var encoder = new util.TextEncoder('utf-8')
 
+const cors = require('cors')
+const corsOption = {
+  origin: 'http://localhost:3000',
+  all: '*'
+}
+
 
 app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
 // app.use('/', express.static(path.join(__dirname, 'admin', 'build')))
@@ -19,8 +25,6 @@ app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*/")
-  res.header("Access-Control-Allow-Origin", "https://young-bastion-69652.herokuapp.com/")
-  res.header("Access-Control-Allow-Origin", "https://young-bastion-69652.herokuapp.com") // обновляем в соответствии с доменом, из которого вы будете делать запрос
 
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Methods", "HEAD, OPTIONS, GET, POST, PUT, DELETE")
