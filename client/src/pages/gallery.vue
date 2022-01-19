@@ -79,7 +79,7 @@ export default {
       document.title = 'Neirodialog Галлерея'
     },
     async getGallry() {
-      const responce = await fetch('http://77.223.97.78/api/find/gallery', {
+      const responce = await fetch('/api/find/gallery', {
         method: 'GET'
       })
       
