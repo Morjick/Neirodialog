@@ -75,7 +75,10 @@ export default {
     async getShop() {
       console.log('меня попросили достать продукты')
       const responce = await fetch('/api/find/products', {
-        method: 'GET'
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
       })
       
       const candidate = await responce.json()

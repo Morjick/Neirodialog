@@ -80,7 +80,10 @@ export default {
     },
     async getGallry() {
       const responce = await fetch('/api/find/gallery', {
-        method: 'GET'
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
       })
       
       const candidate = await responce.json()
