@@ -12,16 +12,14 @@ app.use(express.static('public'))
 var util= require('util')
 var encoder = new util.TextEncoder('utf-8')
 
-const cors = require('cors')
-const corsOption = {
-  origin: 'http://localhost:3000',
-  all: '*'
-}
+// const cors = require('cors')
+// const corsOption = {
+//   origin: 'http://localhost:3000',
+//   all: '*'
+// }
 
 
 app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
-// app.use('/', express.static(path.join(__dirname, 'admin', 'build')))
-// app.use('/notes', express.static(path.join(__dirname, 'admin', 'build')))
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*/")

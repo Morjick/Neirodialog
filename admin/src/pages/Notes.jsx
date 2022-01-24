@@ -27,7 +27,7 @@ const Notes = () => {
   }
 
   useEffect(async () => {
-    const responce = await fetch('/api/find/notes', {
+    const responce = await fetch('http://77.223.97.78/api/find/notes', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
