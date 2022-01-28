@@ -22,6 +22,14 @@ app.use(function (req, res, next) {
   next()
 })
 
+app.all('*', function(req, res, next) {
+  var origin = req.get('origin'); 
+  res.header('Access-Control-Allow-Origin', origin);
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
+
 app.use('/api/getProducts', require('./routes/getProducts.rout'))
 app.use('/api/basket', require('./routes/basket.route'))
 app.use('/api/order', require('./routes/order.route'))
