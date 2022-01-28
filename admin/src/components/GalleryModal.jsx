@@ -2,6 +2,8 @@ import React, { useState } from "react"
 
 import CloseImg from '../assets/close.png'
 
+import { toast } from 'react-toastify'
+
 const GalleryModal = items => {
   if (!items.show) return null
 
@@ -27,6 +29,17 @@ const GalleryModal = items => {
     })
 
     const candidate = await responce.json()
+
+    toast(candidate.message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark'
+    })
 
     items.createGalleryHandler()
     items.onClose()

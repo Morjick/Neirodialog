@@ -12,6 +12,22 @@
 <script>
 export default {
   name: 'about',
+  data() {
+    return {
+      about: []
+    }
+  },
+  methods: {
+    async getNotes() {
+      const responce = await fetch('http://77.223.97.78/api/find/notes', {
+        method: 'GET'
+      })
+
+      const candidate = await responce.json()
+      
+      console.log(candidate)
+    }
+  }
 }
 </script>
 
