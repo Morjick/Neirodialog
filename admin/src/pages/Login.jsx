@@ -16,7 +16,7 @@ const Login = () => {
       password: password.value
     }
 
-    const responce = await fetch('/api/auth/login', {
+    const responce = await fetch('http://77.223.97.78/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const Login = () => {
       localStorage.setItem('token', token)
       localStorage.setItem('userId', userId)
 
-      document.location = '/bots'
+      document.location = '/notes'
     }
 
     console.log('message', candidate.message)

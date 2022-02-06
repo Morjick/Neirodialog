@@ -33,7 +33,7 @@ const NotesModal = items => {
 
     console.log(data)
 
-    const responce = await fetch('/api/create/notes', {
+    const responce = await fetch('http://77.223.97.78/api/create/notes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -27,7 +27,7 @@ const MessageModal = items => {
 
     items.onClose()
 
-    const responce = await fetch('/api/message/create', {
+    const responce = await fetch('http://77.223.97.78/api/message/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

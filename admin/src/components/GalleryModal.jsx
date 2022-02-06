@@ -20,7 +20,7 @@ const GalleryModal = items => {
       date: date.value
     }
 
-    const responce = await fetch('/api/create/gallery', {
+    const responce = await fetch('http://77.223.97.78/api/create/gallery', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

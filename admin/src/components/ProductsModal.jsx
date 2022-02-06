@@ -22,7 +22,7 @@ const ProductModal = items => {
       price: price.value
     }
 
-    const responce = await fetch('/api/create/products', {
+    const responce = await fetch('http://77.223.97.78/api/create/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
