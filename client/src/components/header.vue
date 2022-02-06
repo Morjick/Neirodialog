@@ -15,7 +15,7 @@
               <router-link to="/learn" > Обучение </router-link>
             </li>
             <li class="menu_item">
-              <router-link to="/gallery" > Галлерея </router-link>
+              <router-link to="/gallery" > Галерея </router-link>
             </li>
             <li class="menu_item">
               <router-link to="/shop" > Магазин </router-link>
