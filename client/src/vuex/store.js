@@ -31,11 +31,12 @@ let store = new Vuex.Store({
       state.product[item.id].quantity++
     },
     SET_SUMM_BASKET: (state) => {
+      let count
       state.basket.forEach( el => {
-        state.summBasket += el.price 
+        count += el.price 
         console.log(state.summBasket)
       })
-      return state.summBasket
+      state.summBasket = count
     },
   },
   getters: {
